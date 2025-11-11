@@ -1,0 +1,75 @@
+:root {
+  --green: #20c736;
+  --dark: #0f1720;
+  --muted: #6b7280;
+}
+
+/* === Footer Section === */
+.footer-section {
+  background: white 100%;
+  padding: 0; /* top/bottom lines outside padding area */
+  font-family: "Poppins", sans-serif;
+  color: var(--dark);
+}
+
+/* Green line (same as header top/bottom line) */
+.footer-line {
+  height: 10px;
+  background-color: var(--green);
+}
+
+/* === Main Content === */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding: 60px 8% 20px;
+}
+
+.footer-column h4 {
+  color: var(--green);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+  color: var(--green);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(32, 199, 54, 0.3);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .footer-columns {
+    gap: 30px;
+    padding: 40px 6% 20px;
+  }
+
+  .footer-column h4 {
+    font-size: 1.1rem;
+  }
+}

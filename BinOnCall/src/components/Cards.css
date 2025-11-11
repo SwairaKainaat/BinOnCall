@@ -1,0 +1,71 @@
+.card-container {
+  position: relative;
+  width: 450px;
+  height: 450px;
+  margin: auto;
+}
+
+.card {
+  position: absolute;
+  width: 180px;
+  height: 250px;
+  background: white;
+  border: 5px solid #20c736;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card positions */
+.card1 { top: 10px; left: 120px; }
+.card2 { top: 110px; left: 20px; }
+.card3 { top: 110px; left: 220px; }
+.card4 { top: 210px; left: 120px; }
+
+/* ✅ Responsive Fixes */
+@media (max-width: 768px) {
+  .card-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card {
+    width: 120px;
+    height: 170px;
+    border-width: 3px;
+  }
+
+  .card1 { top: 5px; left: 90px; }
+  .card2 { top: 70px; left: 20px; }
+  .card3 { top: 70px; left: 150px; }
+  .card4 { top: 140px; left: 90px; }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    width: 240px;
+    height: 260px;
+  }
+
+  .card {
+    width: 100px;
+    height: 140px;
+  }
+
+  .card1 { top: 5px; left: 70px; }
+  .card2 { top: 60px; left: 10px; }
+  .card3 { top: 60px; left: 120px; }
+  .card4 { top: 115px; left: 70px; }
+}
